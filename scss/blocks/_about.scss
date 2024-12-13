@@ -1,0 +1,201 @@
+.about {
+    @include block-margin;
+
+    &__top {
+        @include block-margin;
+    }
+
+    &__top-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include vp-1023 {
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 98px;
+        }
+
+        @include vp-767 {
+            padding: 0 17%;
+        }
+
+        @media (max-width: 685px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 580px;
+        }
+    }
+
+    &__images {
+        @include vp-1023 {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &__img {
+        border-bottom-right-radius: 600px;
+        border-bottom-left-radius: 600px;
+        overflow: hidden;
+    }
+
+    &__top-mid {
+        border-top: 1px;
+        border-left: 1px;
+        border-right: 1px;
+        border-bottom: 0;
+        border-style: solid;
+        border-color: #C49A6C;
+        border-top-right-radius: 600px;
+        border-top-left-radius: 600px;
+        
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include vp-767 {
+            width: 100%;
+            justify-content: start;
+            min-height: 290px;
+            padding: 25px 13px;
+        }
+    }
+
+    &__icon {
+        width: 24%;
+        height: auto;
+        margin: 0 0 30px 0;
+
+        @media (max-width: 1230px) {
+            margin: 0 0 20px 0;
+        }
+        @include vp-1023 {
+            min-width: 70px;
+        }
+
+        @include vp-767 {
+            width: 27%;
+            min-width: 60px;
+        }
+    }
+
+    &__subname {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.2em;
+        color: $color-fallow;
+        margin: 0 0 10px 0;
+
+        @media (max-width: 1230px) {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @include vp-767 {
+            font-size: 10px;
+            line-height: 14px;
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__name {
+        font-family: $ff-tenor;
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: -0.08em;
+        text-align: center;
+        margin: 0 0 40px 0;
+
+        @media (max-width: 1350px) {
+            font-size: 28px;
+            line-height: 32px;
+        }
+
+        @media (max-width: 1230px) {
+            margin: 0 0 20px 0;
+        }
+
+        @include vp-767 {
+            width: 200px;
+            font-size: 24px;
+            line-height: 28px;
+            margin: 0 0 15px 0;
+        }
+    }
+
+    &__addr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        @media (max-width: 1230px) {
+            gap: 10px;
+        }
+
+        @include vp-767 {
+            gap: 5px;
+        }
+
+        &-icon {
+            flex-shrink: 0;
+
+            @include vp-1023 {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            color: $color-white;
+            text-align: center;
+
+            @media (max-width: 1230px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &__bottom {
+        @include block-margin;
+    }
+
+    &__text {
+        margin: 0 auto 0;
+        max-width: 1100px;
+        font-family: $ff-tenor;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-fallow;
+
+        @include vp-1023 {
+            font-size: 24px;
+            line-height: 30px;
+            max-width: 622px;
+        }
+
+        @include vp-767 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    &__pic {
+        width: 100%;
+    }
+}

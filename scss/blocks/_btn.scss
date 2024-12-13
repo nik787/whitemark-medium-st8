@@ -1,0 +1,32 @@
+.btn {
+    min-width: 220px;
+    padding: 17px;
+    border: 1px solid $color-fallow;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: transparent;
+
+    font-family: $ff-roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $color-fallow;
+
+    @include vp-1023 {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 15px;
+        min-width: 180px;
+    }
+
+    &:hover {
+        background-color: $color-fallow;
+        color: $color-rustic-red;
+    }
+
+    &:focus-visible {
+        background-color: $color-fallow;
+        color: $color-rustic-red;
+        outline: none;
+    }
+}

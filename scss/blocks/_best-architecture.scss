@@ -1,0 +1,148 @@
+.best-architecture {
+    @include block-margin;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 40px 0;
+
+        @include vp-1023 {
+            margin: 0 0 20px 0;
+        }
+
+        @include vp-767 {
+            flex-direction: column;
+            gap: 15px;
+            margin: 0 0 40px 0;
+        }
+    }
+
+    &__title {
+        max-width: calc(33.33% - 84px * 2/3);
+        margin: 0 0 0 0;
+
+        font-family: $ff-tenor;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 44px;
+        letter-spacing: -0.08em;
+        text-transform: uppercase;
+        color: $color-fallow;
+
+        @include vp-1023 {
+            max-width: calc(33.33% - 19px * 2/3);
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        @include vp-767 {
+            max-width: 100%;
+            padding: 0 20px;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        max-width: calc(33.33% - 84px * 2/3);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+
+        @include vp-1023 {
+            max-width: calc(33.33% - 19px * 2/3);
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        @include vp-767 {
+            max-width: 100%;
+            padding: 0 20px;
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 84px;
+
+        margin: 0 0 0 0;
+        padding: 0;
+        list-style: none;
+
+        @include vp-1023 {
+            gap: 19px;
+        }
+
+        @include vp-767 {
+            display: flex;
+            gap: 10px;
+            overflow-y: auto;
+            
+            margin: 0 -20px;
+            padding: 0 20px;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (min-width: 540px) and (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        &:nth-child(even) {
+            .best-architecture__card-images {
+                border-radius: 600px 600px 0 0;
+            }
+        }
+
+        &:nth-child(odd) {
+            .best-architecture__card-images {
+                border-radius: 0 0 600px 600px;
+            }
+        }
+
+        @include vp-767 {
+            width: 160px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__card {
+        &-images {
+            margin: 0 0 20px 0;
+            overflow: hidden;
+        }
+
+        &-title {
+            margin: 0 0 0 0;
+            padding: 0 10px;
+            font-family: $ff-tenor;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: -0.08em;
+            text-align: center;
+            color: $color-fallow;
+
+            @include vp-1023 {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            @include vp-767 {
+                font-size: 12px;
+                line-height: 16px;
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.title {
+    margin: 0 0 0 0;
+    font-family: $ff-tenor;
+    font-weight: 400;
+    letter-spacing: -0.08em;
+
+    &--h1 {
+        font-size: 60px;
+        line-height: 70px;
+        color: $color-white;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include vp-1023 {
+            font-size: 40px;
+            line-height: 46px;
+        }
+
+        @include vp-767 {
+            font-size: 28px;
+            line-height: 36px;
+        }
+    }
+
+    &--h2 {
+        font-size: 34px;
+        line-height: 44px;
+        color: $color-fallow;
+
+        @include vp-1023 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        @include vp-767 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+}
+
