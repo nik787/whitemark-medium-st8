@@ -879,6 +879,10 @@ a {
 .hero {
   margin: 0 0 120px 0;
   position: relative;
+  height: 740px;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
 }
 @media (max-width: 1023px) {
   .hero {
@@ -888,6 +892,23 @@ a {
 @media (max-width: 767px) {
   .hero {
     margin: 0 0 60px 0;
+  }
+}
+@media (min-width: 1729px) {
+  .hero {
+    height: 100vh;
+  }
+}
+@media (max-width: 1023px) {
+  .hero {
+    height: 460px;
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    display: block;
+    padding: 0;
   }
 }
 .hero::before {
@@ -905,36 +926,55 @@ a {
   }
 }
 .hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
+  height: 740px;
+}
+@media (min-width: 1729px) {
+  .hero__img {
+    height: 100vh;
+  }
+}
+@media (max-width: 1023px) {
+  .hero__img {
+    height: 460px;
+  }
 }
 @media (max-width: 767px) {
   .hero__img {
+    position: relative;
     margin: 0 0 20px 0;
+    height: auto;
   }
 }
 .hero__wrapper {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+}
+@media (max-width: 767px) {
+  .hero__wrapper {
+    margin: 0 auto;
+  }
+}
+.hero__title {
   max-width: 800px;
 }
 @media (max-width: 1404px) {
-  .hero__wrapper {
+  .hero__title {
     max-width: 900px;
     width: 100%;
   }
 }
 @media (max-width: 1023px) {
-  .hero__wrapper {
+  .hero__title {
     max-width: 520px;
   }
 }
 @media (max-width: 767px) {
-  .hero__wrapper {
-    position: static;
-    transform: none;
-    margin: 0 auto;
+  .hero__title {
+    max-width: none;
   }
 }
 

@@ -1,8 +1,25 @@
 .hero {
-
     @include block-margin;
-
     position: relative;
+    height: 740px;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+
+    @media (min-width: 1729px) {
+        height: 100vh;
+    }
+
+    @include vp-1023 {
+        height: 460px;
+    }
+
+    @include vp-767 {
+        height: auto;
+        display: block;
+        padding: 0;
+    }
+    
     &::before {
         content: "";
         position: absolute;
@@ -18,33 +35,46 @@
     }
 
     &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
         width: 100%;
+        height: 740px;
+
+        @media (min-width: 1729px) {
+            height: 100vh;
+        }
+
+        @include vp-1023 {
+            height: 460px;
+        }
 
         @include vp-767 {
+            position: relative;
             margin: 0 0 20px 0;
+            height: auto;
         }
     }
 
     &__wrapper {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 800px;
+        position: relative;
+        @include vp-767 {
+            margin: 0 auto;
+        }
+    }
 
+    &__title {
+        max-width: 800px;
         @media (max-width: 1404px) {
             max-width: 900px;
             width: 100%;
         }
-
         @include vp-1023 {
             max-width: 520px;
         }
-
         @include vp-767 {
-            position: static;
-            transform: none;
-            margin: 0 auto;
+            max-width: none;
         }
     }
 }
